@@ -1,5 +1,6 @@
 export function inspect(target, propertyKey, descriptor) {
     const metodoOriginal = descriptor.value;
+    console.log("Resultado Método Original " + metodoOriginal);
     descriptor.value = function (...args) {
         console.log(`--- Método ${propertyKey}`);
         console.log(`--- parâmetros: ${JSON.stringify(args)}`);
